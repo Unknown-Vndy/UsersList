@@ -1,0 +1,29 @@
+.wrapper {
+  margin: 10px auto;
+  max-width: 800px;
+  border-radius: 5px;
+}
+
+.userBlock {
+  padding: 10px;
+  display: flex;
+  background: rgb(241, 241, 241);
+  border-radius: 10px;
+  align-items: center;
+}
+
+.userBlock:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.userImage {
+  border-radius: 50%;
+}
+
+.userInfo {
+  padding-left: 10px;
+}
+
+.deleteUserButton {
+  margin-left: auto;
+}
