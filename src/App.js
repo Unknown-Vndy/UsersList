@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import UsersList from './components/UsersList';
+import Slider from './components/Slider';
 
 function App () {
-  return <UsersList />;
+  return <Slider />;
 }
 
 export default App;
