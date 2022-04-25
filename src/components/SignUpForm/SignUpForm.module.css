@@ -1,0 +1,57 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #2f3338;
+  color: rgb(156, 159, 163);
+}
+
+.formName {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.label {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+  /* убрать для последнего */
+}
+
+.label span {
+  margin-right: 10px;
+  flex-basis: 20%;
+}
+
+.input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  flex: 1 1 80%;
+  background: rgb(13, 16, 19);
+  color: inherit;
+}
+
+.inputName {
+  text-transform: capitalize;
+}
+
+.inputValid {
+  border: 1px solid rgb(145, 209, 151);
+}
+
+.inputInvalid {
+  border: 1px solid rgb(235, 69, 69);
+}
+.signUpButton {
+  margin-top: 10px;
+  width: fit-content;
+  padding: 10px;
+  color: inherit;
+  border: 0;
+  border-radius: 10px;
+  background: rgb(255, 215, 138);
+}

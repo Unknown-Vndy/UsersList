@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import Slider from './components/Slider';
+import SifnUpForm from './components/SignUpForm';
 
 function App () {
-  return <Slider />;
+  return <SifnUpForm />;
 }
 
 export default App;
