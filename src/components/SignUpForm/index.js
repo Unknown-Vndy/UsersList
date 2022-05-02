@@ -30,16 +30,24 @@ class SifnUpForm extends Component {
       isNameValid: false,
     };
   }
-  handleEmailChange = ({ target: { value } }) => {
+  // handleEmailChange = ({ target: { value } }) => {
+  //   this.setState({
+  //     email: value,
+  //     isEmailValid: EMAIL_REG_EXP.test(value),
+  //   });
+  // };
+  // handleNameChange = ({ target: { value } }) => {
+  //   this.setState({
+  //     name: value,
+  //     isNameValid: NAME_REG_EXP.test(value),
+  //   });
+  // };
+  handleChange = ({ target: { value, name } }, regExp) => {
+    const capitalizedName = name[0].toUpperCase() + name.slice(1);
+    console.log(value);
     this.setState({
-      email: value,
-      isEmailValid: EMAIL_REG_EXP.test(value),
-    });
-  };
-  handleNameChange = ({ target: { value } }) => {
-    this.setState({
-      name: value,
-      isNameValid: NAME_REG_EXP.test(value),
+      [name]: value,
+      [`is${capitalizedName}Valid`]: regExp.test(value),
     });
   };
   handlePasswordChange = ({ target: { value } }) => {
@@ -48,18 +56,6 @@ class SifnUpForm extends Component {
       isPasswordValid: PASSWORD_REG_EXP.test(value),
     });
   };
-
-  // handleChange = ({ target: { value, name } }, isFieldValid, typeRegExp) => {
-  //   this.setState({
-  //     [name]: value,
-  //     isFieldValid: typeRegExp.test(value),
-  //   });
-  // };
-  // я хотел создать универсальный обработчик, но не знаю как передать параметры в компоненте jsx-атрибутом
-  // <Label
-  //   onChange={this.handleChange(isFieldValid, typeRegExp)} <<<<
-  // />
-  // возможно ли такое реализовать?
 
   handlePasswordVerification = ({ target: { value, name } }) => {
     const { password } = this.state;
@@ -102,12 +98,13 @@ class SifnUpForm extends Component {
           type='name'
           name='name'
           placeholder='name'
-          onChange={this.handleNameChange}
+          // onChange={this.handleNameChange}
+          onChange={e => this.handleChange(e, NAME_REG_EXP)}
         />
         <Label
           classNames={this.inputClassNames(isEmailValid)}
           value={email}
-          onChange={this.handleEmailChange}
+          onChange={e => this.handleEmailChange(e, EMAIL_REG_EXP)}
           type='email'
           name='email'
           placeholder='email'
