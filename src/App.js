@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import SifnUpForm from './components/SignUpForm';
+import CreateAccountForm from './components/CreateAccountForm';
 
 function App () {
-  return <SifnUpForm />;
+  return <CreateAccountForm />;
 }
 
 export default App;

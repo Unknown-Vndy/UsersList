@@ -42,6 +42,7 @@ class SifnUpForm extends Component {
   //     isNameValid: NAME_REG_EXP.test(value),
   //   });
   // };
+
   handleChange = ({ target: { value, name } }, regExp) => {
     const capitalizedName = name[0].toUpperCase() + name.slice(1);
     console.log(value);
@@ -50,6 +51,7 @@ class SifnUpForm extends Component {
       [`is${capitalizedName}Valid`]: regExp.test(value),
     });
   };
+
   handlePasswordChange = ({ target: { value } }) => {
     this.setState({
       password: value,

@@ -1,0 +1,53 @@
+.formWrapper {
+  background: rgb(62, 169, 245);
+  height: 100vh;
+  color: white;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+}
+
+h1,
+p {
+  margin-bottom: 10px;
+}
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  min-height: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  display: block;
+  width: 500px;
+  position: relative;
+}
+
+label span {
+  color: rgb(128, 6, 6);
+  position: absolute;
+}
+
+.submitButton {
+  min-width: 100%;
+  min-height: 50px;
+  border-radius: 5px;
+  background: #28d2d0;
+  color: inherit;
+  border: 0;
+}
+
+.valid {
+  background: rgb(160, 235, 160);
+}
+
+.invalid {
+  background: rgb(199, 142, 142);
+}
